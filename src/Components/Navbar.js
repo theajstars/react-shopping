@@ -20,7 +20,7 @@ export default function Navbar(props) {
                     </span>
                 </Link>
                 <input type="search" className="search-products font-1-1"
-                    placeholder="Search products..." spellCheck="false"
+                    placeholder="Filter products..." spellCheck="false"
                 />
                 <div className="nav-actions">
                     <Link to='/saved'>
