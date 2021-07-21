@@ -1,0 +1,8 @@
+@media screen and (max-width: 490px){
+    input.search-products{
+        width: 190px;
+    }
+    span.nav-icon{
+        margin: 0px 7px;
+    }
+}

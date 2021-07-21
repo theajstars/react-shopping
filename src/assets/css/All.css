@@ -1,0 +1,9 @@
+@import url('./fonts.css');
+@import url('./font-sizes.css');
+a{
+    text-decoration: none;
+    outline: none;
+}
+body{
+    margin: 0px;
+}

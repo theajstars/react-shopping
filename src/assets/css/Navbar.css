@@ -1,0 +1,66 @@
+@import url('./All.css');
+@import url('./small_screens/navbar.css');
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px -15px rgba(0, 0, 0, 0.25);
+    padding: 3vh 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.nav-icon{
+    font-size: 1.5rem;
+    margin: 0px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+.home-icon{
+    color: #595757
+}
+.saved-items-icon{
+    color: #C75959;
+}
+.saved-value{
+    color: white;
+    background-color: #C75959;
+    height: fit-content;
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    vertical-align: top;
+    margin-right: -6px;
+    font-family: 'Jost', sans-serif;
+    transition: 0.2s;
+}
+.cart-icon{
+    color: #24596A;
+}
+.cart-value{
+    background-color: #1c4350;
+    color: white;
+    font-size: 0.9rem;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-left: -6px;
+    vertical-align: top;
+    font-family: 'Jost', sans-serif;
+    transition: 0.2s;
+}
+.search-products{
+    outline: none;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 10px 2px #E9E3E3;
+    border-radius: 20px;
+    padding: 6px 20px;
+    width: 270px;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}

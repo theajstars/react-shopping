@@ -1,0 +1,11 @@
+@media screen and (max-width: 460px){
+    div.product{
+        width: 170px;
+    }
+}
+@media screen and (max-width: 390px){
+    div.product{
+        width: 160px;
+        padding: 6px;
+    }
+}

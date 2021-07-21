@@ -1,0 +1,61 @@
+@import url('./All.css');
+body{
+    font-family:  'Jost', sans-serif;
+}
+.saved-items{
+    margin-top: 30px;
+}
+.saved-item{
+    background: #FFFFFF;
+    box-shadow: 4px 4px 30px -10px rgba(0, 0, 0, 0.25);
+    width: 350px;
+    height: 140px;
+    margin: 20px 0px;
+    box-sizing: border-box;
+    padding: 0px 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.saved-item img{
+    height: 85px;
+}
+.saved-item-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.saved-item-actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.saved-item-actions span{
+    width: 80px;
+    box-sizing: border-box;
+    padding: 3px 0px;
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.buy{
+    background: #595757;
+    box-shadow: 0px 2px 3px #504F4F;
+    color: white;
+}
+.remove-saved{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px -0.5px #504F4F;
+    color: #595757;
+}
+.buy:hover{
+    background: #302f2f;
+}
+.remove-saved:hover{
+    box-shadow: 0px 0px 33px -10px #504F4F;
+}

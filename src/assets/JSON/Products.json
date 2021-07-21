@@ -1,0 +1,113 @@
+{
+    "productList":[
+        {
+            "name": "Ancient Velvet vase",
+            "price": 97500,
+            "pictureURL": "https://i.imgur.com/w4dytPI.png",
+            "amountInStock": 25,
+            "vendor": "Antique storez",
+            "key": "liasjnfo12jon21",
+            "reviews": 4.2
+        },
+        {
+            "name": "Fairly shiny axe",
+            "price": 27500,
+            "pictureURL": "https://i.imgur.com/0nVH9bH.png",
+            "amountInStock": 15,
+            "vendor": "Raymond ventures",
+            "key": "mksdmf093jen1",
+            "reviews": 4.8
+        },
+        {
+            "name": "Those very old bones",
+            "price": 9300,
+            "pictureURL": "https://i.imgur.com/YOHHhHD.png",
+            "amountInStock": 2,
+            "vendor": "Lazarine",
+            "key": "smoaij39eij1m",
+            "reviews": 4
+        },
+        {
+            "name": "Some bonfire",
+            "price": 27500,
+            "pictureURL": "https://i.imgur.com/KQYqCp0.png",
+            "amountInStock": 6,
+            "vendor": "Fiery hot flames",
+            "key": "kaospoik20mek2",
+            "reviews": 5
+        },
+        
+        {
+            "name": "Maui's Fish hook",
+            "price": 23320,
+            "pictureURL": "https://i.imgur.com/paS5r7R.png",
+            "amountInStock": 1,
+            "vendor": "Prehistoricz",
+            "key": "samo309j1enm",
+            "reviews": 3.7
+        },
+        {
+            "name": "A lump of nothing",
+            "price": 500,
+            "pictureURL": "https://i.imgur.com/luqO5Ao.png",
+            "amountInStock": 52,
+            "vendor": "Earthen",
+            "key": "kmaos903jejmewd",
+            "reviews": 2.9
+        },
+        {
+            "name": "A headstrong rhino",
+            "price": 330000,
+            "pictureURL": "https://i.imgur.com/DYEdee1.png",
+            "amountInStock": 63,
+            "vendor": "Wildlife central",
+            "key": "kmasodmp13ij1mokaa",
+            "reviews": 3.1
+        },
+        {
+            "name": "An actual dinosaur!",
+            "price": 936500,
+            "pictureURL": "https://i.imgur.com/gUak2tD.png",
+            "amountInStock": 2,
+            "vendor": "Prehistoricz",
+            "key": "kas0230ma9",
+            "reviews": 4.2
+        },
+        {
+            "name": "Salad bowl 2.0",
+            "price": 3200,
+            "pictureURL": "https://i.imgur.com/lOcmGKA.png",
+            "amountInStock": 41,
+            "vendor": "Healthy diet",
+            "key": "adspa9031k1eq",
+            "reviews": 4.5
+        },
+        {
+            "name": "Bonfire remixed",
+            "price": 330000,
+            "pictureURL": "https://i.imgur.com/U4bXQRg.png",
+            "amountInStock": 13,
+            "vendor": "Fiery hot flames",
+            "key": "asdla031mom1o1",
+            "reviews": 3.9
+        },
+        {
+            "name": "Another lump of nothing",
+            "price": 540,
+            "pictureURL": "https://i.imgur.com/KuN2ABV.png",
+            "amountInStock": 2,
+            "vendor": "Earthen",
+            "key": "samodaj03uj3o13oi",
+            "reviews": 3.8
+        },
+        {
+            "name": "Aquaman's Trident",
+            "price": 23320,
+            "pictureURL": "https://i.imgur.com/IO5NMxT.png",
+            "amountInStock": 1,
+            "vendor": "Prehistoricz",
+            "key": "ksoaiaj0sid0ij",
+            "reviews": 5
+        }
+    ]
+}

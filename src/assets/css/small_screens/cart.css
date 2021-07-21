@@ -1,0 +1,17 @@
+@media screen and (max-width: 845px) {
+    div.cart-section{
+        flex-direction: column  !important;
+        align-items: center !important;
+    }
+    div.cart-item{
+        max-width: 360px !important;
+    }
+    body{
+        margin-bottom: 50px !important;
+    }
+}
+@media screen and (max-width: 440px) {
+    div.cart-item{
+        padding: 10px !important;
+    }
+}
