@@ -16,7 +16,7 @@ export default function SavedItems() {
     useEffect(() => {
         var empty = document.getElementById('saved-empty')
         var items = document.querySelector('.saved-items')
-        axios.get('http://localhost:2100/cart/retrieve')
+        axios.get('https://drbravo-shopping-cart-api.herokuapp.com/cart/retrieve')
             .then(res => {
                 if(res.data === '' || res.data === undefined || res.data === null || res.data.length === 0){
                     //Do Nothing
@@ -24,7 +24,7 @@ export default function SavedItems() {
                     setCart(res.data)
                 }
             })
-        axios.get('http://localhost:2100/saved/retrieve')
+        axios.get('https://drbravo-shopping-cart-api.herokuapp.com/saved/retrieve')
             .then(res => {
                 console.log(res.data.length)
                 if(res.data.length > 0){
@@ -39,7 +39,7 @@ export default function SavedItems() {
     }, [])
     useEffect(() => {
         if(bool === true){
-            axios.post('http://localhost:2100/cart', cart)
+            axios.post('https://drbravo-shopping-cart-api.herokuapp.com/cart', cart)
             .then((resp) => {
                 console.log('Success: ' + resp.data)
             })
@@ -48,7 +48,7 @@ export default function SavedItems() {
     }, [cart]);
     useEffect(() => {
         if(savedBool === true){
-            axios.post('http://localhost:2100/saved', savedItems)
+            axios.post('https://drbravo-shopping-cart-api.herokuapp.com/saved', savedItems)
                 .then(resp => {
                     console.log(resp)
                 })

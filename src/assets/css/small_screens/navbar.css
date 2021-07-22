@@ -6,3 +6,28 @@
         margin: 0px 7px;
     }
 }
+@media screen and (max-width: 610px){
+    .nav-actions{
+        display: none !important;
+        flex-direction: column;
+        position: fixed ;
+        right: 0vw;
+        top: 10vh;
+        background: #FFFFFF;
+        padding: 2vw 3vw !important;
+    }
+    .nav-actions-active{
+        display: flex !important;
+        z-index: 200000 !important;
+        box-shadow: 0px 10px 20px -10px rgb(0 0 0 / 25%);
+    }
+    .nav-icon{
+        margin: 0px !important;
+    }
+    .dropdown{
+        cursor: pointer;
+        margin-right: 3vw;
+        display: block !important;
+        right: 3vw !important;
+    }
+}

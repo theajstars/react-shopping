@@ -15,7 +15,7 @@ export default function Cart() {
     const [customs, setCustoms] = useState(0)
     const [savedItems, setSavedItems] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:2100/cart/retrieve')
+        axios.get('https://drbravo-shopping-cart-api.herokuapp.com/cart/retrieve')
             .then(res => {
                 if(res.data === '' || res.data === undefined || res.data === null || res.data.length === 0){
                     document.getElementById('cart-empty').style.display = 'block'
@@ -28,7 +28,7 @@ export default function Cart() {
                     }
                 }
             })
-        axios.get('http://localhost:2100/saved/retrieve')
+        axios.get('https://drbravo-shopping-cart-api.herokuapp.com/saved/retrieve')
             .then(res => {
                 if(res.data !== '' || res.data !== undefined || res.data !== null || res.data.length !== 0){
                     setSavedItems(res.data)
@@ -75,7 +75,7 @@ export default function Cart() {
             setCart(cart.filter(item => item.key !== product.key))
             setCart(cart => [...cart, ...newArr])
 
-            axios.post('http://localhost:2100/cart', cart)
+            axios.post('https://drbravo-shopping-cart-api.herokuapp.com/cart', cart)
                 .then((resp) => {
                     console.log('Success',resp)
                 })
@@ -96,7 +96,7 @@ export default function Cart() {
             pay.innerHTML = 'Payment Completed!'
         }, 2200)
         setTimeout(() => {
-            axios.post('http://localhost:2100/reset', '')
+            axios.post('https://drbravo-shopping-cart-api.herokuapp.com/reset', '')
             .then((resp) => {
                 console.log('Success',resp)
             })

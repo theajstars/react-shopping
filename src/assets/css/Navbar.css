@@ -20,6 +20,9 @@
     text-decoration: none;
     outline: none;
 }
+.nav-actions{
+    display: block;
+}
 .home-icon{
     color: #595757
 }
@@ -53,6 +56,10 @@
     font-family: 'Jost', sans-serif;
     transition: 0.2s;
 }
+.dropdown{
+    display: none;
+    font-size: 1.4rem;
+}
 .search-products{
     outline: none;
     border: none;
@@ -63,4 +70,9 @@
     width: 270px;
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
+}
+.search-products-icon{
+    margin-left: 15px;
+    color: #595757;
+    cursor: pointer;
 }

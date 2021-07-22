@@ -1,17 +1,28 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import '../assets/css/Navbar.css'
 import { CartConsumer } from '../Context/cartContext'
 import { SavedItemsConsumer } from '../Context/savedItemsContext'
 
 export default function Navbar(props) {
 
+    const [searchValue, setSearchValue] = useState('')
+    const [menuStatus, setMenuStatus] = useState(0)
     useEffect(() => {
         setTimeout(() => {
             
         }, 1200)
     }, [])
+    function searchProducts(){
+        console.log(searchValue)
+        searchValue !== '' ? window.location.href = `/?search=${searchValue}` : alert('You must enter a search term')
+    }
+    function menuDrop(){
+        var menu = document.getElementById('nav-actions')
+        menu.classList.toggle('nav-actions-active')
+    }
     return (
             <div className="nav">
                 <Link to='/'>
@@ -19,10 +30,32 @@ export default function Navbar(props) {
                         <i className="fas fa-home"></i>
                     </span>
                 </Link>
-                <input type="search" className="search-products font-1-1"
-                    placeholder="Filter products..." spellCheck="false"
-                />
-                <div className="nav-actions">
+                
+                <div>
+                    <input type="text" className="search-products font-1-1"
+                        placeholder="Filter products..." spellCheck="false"
+                        onInput={(e) => setSearchValue(e.target.value)}
+                        onKeyUp={(event) => {
+                            if(event.keyCode === 13){
+                                searchProducts()
+                            }
+                        }}
+                        autoFocus
+                        value={searchValue}
+                    />
+                    
+                    <span className="search-products-icon"
+                        onClick={() =>searchProducts()}
+                    >
+                            <i className="fas fa-search"></i>
+                    </span>
+                </div>
+                <div className="dropdown"
+                    onClick={() => menuDrop()}
+                >
+                    <i className="far fa-bars"></i>
+                </div>
+                <div className="nav-actions" id="nav-actions">
                     <Link to='/saved'>
                         <span className="saved-items-icon nav-icon">
                             <SavedItemsConsumer>

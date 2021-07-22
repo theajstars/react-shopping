@@ -15,16 +15,54 @@ export default function Products(props) {
 
     const [savedItems, setSavedItems] = useState([])
     const [search, updateSearch] = useState('')
+    const [searchedProducts, updateSearchedProducts] = useState([])
 
     useEffect(() => {
-        axios.post('http://localhost:2100/reset')
+        var url = new URL(window.location.href)
+        console.log(url.search)
+        axios.post('https://drbravo-shopping-cart-api.herokuapp.com/reset')
             .then(res => {
                 //Do Nothing
             })
+        var home = new URL(window.location.href)
+        var searchParameter = home.searchParams.getAll('search')[0]
+        if(url.search === ''){
+            //If no search exists do nothing
+        }else{
+            document.querySelector('.reset').style.display = 'block'
+            updateSearch(searchParameter)
+            var stringOBJ = {
+                string: searchParameter
+            }
+            axios.post('https://drbravo-shopping-cart-api.herokuapp.com/search', stringOBJ)
+            .then(res => {
+                console.log(res)
+                updateSearchedProducts(res.data)
+                var found = []
+                var productNames = document.getElementsByClassName('product-name')
+                for(var i = 0; i < productNames.length; i++){
+                    for(var x = 0; x < res.data.length; x++){
+                        if(res.data[x].name.toLowerCase() !== productNames[i].innerHTML.toLowerCase()){
+                            //Do nothing
+                        }else{
+                            found.push(productNames[i])
+                        }
+                    }
+                }
+                for(var i = 0; i < productNames.length; i++){
+                    if(found.indexOf(productNames[i]) === -1){
+                        productNames[i].parentElement.parentElement.style.display = 'none'
+                    }else{
+                        productNames[i].parentElement.parentElement.style.display = 'flex'
+                    }
+                }
+                console.log(found)
+            })
+        }
     }, [])
     useEffect(() => {
         if(bool === true){
-            axios.post('http://localhost:2100/cart', cart)
+            axios.post('https://drbravo-shopping-cart-api.herokuapp.com/cart', cart)
             .then((resp) => {
                 console.log('Success: ' + resp.data)
             })
@@ -34,7 +72,7 @@ export default function Products(props) {
 
     useEffect(() => {
         if(savedbool === true){
-            axios.post('http://localhost:2100/saved', savedItems)
+            axios.post('https://drbravo-shopping-cart-api.herokuapp.com/saved', savedItems)
                 .then(resp => {
                     console.log(resp)
                 })
@@ -69,7 +107,7 @@ export default function Products(props) {
             setCart(cart.filter(item => item.key !== product.key))
             setCart(cart => [...cart, ...newArr])
 
-            axios.post('http://localhost:2100/cart', cart)
+            axios.post('https://drbravo-shopping-cart-api.herokuapp.com/cart', cart)
                 .then((resp) => {
                     console.log('Success',resp)
                 })
@@ -104,6 +142,11 @@ export default function Products(props) {
                 </SavedItemsProvider>
                 <center>
                     <Container maxWidth="lg">
+                        <span className="reset"
+                            onClick={() => window.location.href = '/'}
+                        >
+                            Reset filter
+                        </span>
                         <div className="products-container">
                             <Grid container spacing={4} alignItems="center" justifyContent="center" alignContent="center">
                                 {

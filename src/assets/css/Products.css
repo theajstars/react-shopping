@@ -16,7 +16,6 @@
     font-family: 'Jost', sans-serif;
     background: #FFFFFF;
     box-shadow: 0px 3px 6px 2px rgba(0, 0, 0, 0.25);
-
 }
 .product-image{
     height: 90px;
@@ -78,4 +77,14 @@ hr{
 .save-product{
     color: #E86464;
     font-size: 1.4rem;
+}
+.reset{
+    display: none;
+    position: absolute;
+    left: 10vw;
+    margin-top: -17px;
+    box-shadow: 0px 0px 3px 0px #cccccc;
+    padding: 1px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
 }
