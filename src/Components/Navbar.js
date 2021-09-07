@@ -33,7 +33,7 @@ export default function Navbar(props) {
                 
                 <div>
                     <input type="text" className="search-products font-1-1"
-                        placeholder="Filter products..." spellCheck="false"
+                        placeholder="Search products..." spellCheck="false"
                         onInput={(e) => setSearchValue(e.target.value)}
                         onKeyUp={(event) => {
                             if(event.keyCode === 13){
